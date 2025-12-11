@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind Bars - Premium Bicycle Shop</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div id="bgDark"></div>
+    <img id="bgEmblem" src="logo.svg" alt="Behind Bars Logo" onerror="this.style.display='none'">
+    
+    <!-- Main Content Wrapper -->
+    <div class="wrap">
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1 class="title">Behind Bars</h1>
+                    <p class="subtitle">Premium Bicycle Shop & Community</p>
+                    
+                    <!-- Top Navigation -->
+                    <nav class="topnav">
+                        <button class="cat active" data-category="home">
+                            <i class="fas fa-home"></i> Home
+                        </button>
+                        <button class="cat" data-category="shop">
+                            <i class="fas fa-bicycle"></i> Shop
+                        </button>
+                        <button class="cat" data-category="services">
+                            <i class="fas fa-tools"></i> Services
+                        </button>
+                        <button class="cat" data-category="forum">
+                            <i class="fas fa-comments"></i> Forum
+                        </button>
+                        <button class="cat" data-category="about">
+                            <i class="fas fa-info-circle"></i> About
+                        </button>
+                        <button class="cat" data-category="contact">
+                            <i class="fas fa-envelope"></i> Contact
+                        </button>
+                    </nav>
+                </div>
+                
+                <div class="header-right">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="Behind Bars Logo" class="main-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2280%22 fill=%22%23dc143c%22%3EBB%3C/text%3E%3C/svg%3E'">
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Content Sections -->
+            <div class="content-area">
+                
+                <!-- HOME SECTION -->
+                <section id="home-section" class="content-section active">
+                    <div class="hero-section">
+                        <h2 class="section-title">Welcome to Behind Bars</h2>
+                        <p class="section-intro">Your premier destination for high-quality bicycles, expert service, and a vibrant cycling community.</p>
+                        
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                                <h3>Premium Bikes</h3>
+                                <p>Top brands and models for every rider</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                                <h3>Expert Service</h3>
+                                <p>Professional maintenance and repairs</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Community</h3>
+                                <p>Join our passionate cycling community</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h3>Events & Rides</h3>
+                                <p>Group rides and cycling events</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- SHOP SECTION -->
+                <section id="shop-section" class="content-section">
+                    <h2 class="section-title">Our Bikes</h2>
+                    
+                    <!-- Bike Categories -->
+                    <div class="subtabs">
+                        <button class="sub active" data-shop="all">All Bikes</button>
+                        <button class="sub" data-shop="road">Road Bikes</button>
+                        <button class="sub" data-shop="mountain">Mountain Bikes</button>
+                        <button class="sub" data-shop="hybrid">Hybrid</button>
+                        <button class="sub" data-shop="electric">E-Bikes</button>
+                        <button class="sub" data-shop="accessories">Accessories</button>
+                    </div>
+                    
+                    <div class="products-grid" id="products-grid">
+                        <!-- Products will be populated by JavaScript -->
+                    </div>
+                </section>
+                
+                <!-- SERVICES SECTION -->
+                <section id="services-section" class="content-section">
+                    <h2 class="section-title">Our Services</h2>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-header">
+                                <i class="fas fa-tools"></i>
+                                <h3>Basic Tune-Up</h3>
+                            </div>
+                            <p class="service-description">Complete bike inspection, brake and gear adjustment, chain lubrication</p>
+                            <div class="service-price">From $75</div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-header">
+                                <i class="fas fa-cog"></i>
+                                <h3>Full Overhaul</h3>
+                            </div>
+                            <p class="service-description">Complete disassembly, cleaning, and rebuild with new parts as needed</p>
+                            <div class="service-price">From $250</div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-header">
+                                <i class="fas fa-wheel"></i>
+                                <h3>Wheel Building</h3>
+                            </div>
+                            <p class="service-description">Custom wheel builds with your choice of hubs, rims, and spokes</p>
+                            <div class="service-price">From $150/wheel</div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-header">
+                                <i class="fas fa-paint-brush"></i>
+                                <h3>Custom Paint</h3>
+                            </div>
+                            <p class="service-description">Professional custom paint jobs and frame restoration</p>
+                            <div class="service-price">Quote Required</div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-header">
+                                <i class="fas fa-bicycle"></i>
+                                <h3>Bike Fitting</h3>
+                            </div>
+                            <p class="service-description">Professional bike fitting for optimal comfort and performance</p>
+                            <div class="service-price">$125</div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-header">
+                                <i class="fas fa-clock"></i>
+                                <h3>Same-Day Repairs</h3>
+                            </div>
+                            <p class="service-description">Quick turnaround for urgent repairs and basic services</p>
+                            <div class="service-price">Varies</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- FORUM SECTION -->
+                <section id="forum-section" class="content-section">
+                    <h2 class="section-title">Community Forum</h2>
+                    
+                    <!-- Forum Categories -->
+                    <div class="subtabs">
+                        <button class="sub active" data-forum="all">All Topics</button>
+                        <button class="sub" data-forum="general">General Discussion</button>
+                        <button class="sub" data-forum="maintenance">Maintenance Tips</button>
+                        <button class="sub" data-forum="routes">Routes & Rides</button>
+                        <button class="sub" data-forum="marketplace">Marketplace</button>
+                    </div>
+                    
+                    <div class="forum-posts" id="forum-posts">
+                        <!-- Forum posts will be populated by JavaScript -->
+                    </div>
+                    
+                    <button class="btn-primary" id="new-post-btn">
+                        <i class="fas fa-plus"></i> New Topic
+                    </button>
+                </section>
+                
+                <!-- ABOUT SECTION -->
+                <section id="about-section" class="content-section">
+                    <h2 class="section-title">About Behind Bars</h2>
+                    
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>Our Story</h3>
+                            <p>Behind Bars has been serving the cycling community with passion and expertise. We're more than just a bike shop – we're a community of riders dedicated to sharing the joy of cycling.</p>
+                            
+                            <h3>Our Mission</h3>
+                            <p>To provide exceptional bicycles, expert service, and foster a welcoming community where cyclists of all levels can connect, learn, and share their passion for riding.</p>
+                            
+                            <h3>Why Choose Us?</h3>
+                            <ul class="about-list">
+                                <li><i class="fas fa-check"></i> Expert staff with decades of combined experience</li>
+                                <li><i class="fas fa-check"></i> Curated selection of premium bikes and accessories</li>
+                                <li><i class="fas fa-check"></i> Professional service and custom builds</li>
+                                <li><i class="fas fa-check"></i> Active community events and group rides</li>
+                                <li><i class="fas fa-check"></i> Customer satisfaction guaranteed</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Years in Business</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">5000+</div>
+                                <div class="stat-label">Happy Customers</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">100+</div>
+                                <div class="stat-label">Weekly Group Rides</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Online Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- CONTACT SECTION -->
+                <section id="contact-section" class="content-section">
+                    <h2 class="section-title">Get In Touch</h2>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>123 Bike Street<br>Your City, ST 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>(555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@behindbars.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Hours</h4>
+                                    <p>Mon-Fri: 10am-7pm<br>Sat-Sun: 9am-6pm</p>
+                                </div>
+                            </div>
+                            
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form">
+                            <form id="contact-form">
+                                <div class="form-group">
+                                    <input type="text" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="subject" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Behind Bars - Premium Bicycle Shop. All rights reserved.</p>
+            <p>Ride Safe. Ride Behind Bars.</p>
+        </footer>
+    </div>
+    
+    <!-- Modal for New Forum Post -->
+    <div id="post-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create New Topic</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="new-post-form">
+                <div class="form-group">
+                    <input type="text" id="post-title" placeholder="Topic Title" required>
+                </div>
+                <div class="form-group">
+                    <select id="post-category">
+                        <option value="general">General Discussion</option>
+                        <option value="maintenance">Maintenance Tips</option>
+                        <option value="routes">Routes & Rides</option>
+                        <option value="marketplace">Marketplace</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="post-content" rows="6" placeholder="Write your post..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i> Post Topic
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
